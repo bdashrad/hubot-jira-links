@@ -39,7 +39,7 @@ module.exports = (robot) ->
       ///i
 
   robot.hear regex, (res) ->
-    return if msg.subtype is 'bot_message'
+    # return if msg.subtype is 'bot_message'
     project = res.match[1].toUpperCase()
     id = res.match[2]
     issue = project + '-' + id
