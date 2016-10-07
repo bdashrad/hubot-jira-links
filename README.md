@@ -22,7 +22,7 @@ Then add **hubot-jiralinks** to your `external-scripts.json`:
 ### Optional:
 * HUBOT_JIRA_PROJECTS - comma separated list of project prefixes (e.g. "AB,CD,EF")
 
-If you don't set HUBOT_JIRA_PROJECTS, any patter of [a-zA-Z]-#### will be linked
+If you don't set HUBOT_JIRA_PROJECTS, any pattern of [a-zA-Z]-#### will be linked
 
 ## Sample Interaction
 
