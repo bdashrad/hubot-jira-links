@@ -1,5 +1,5 @@
 {
-  "name": "hubot-jiralinks",
+  "name": "hubot-jira-links",
   "description": "recognize jira issue numbers and respond with their urls",
   "version": "1.0.0",
   "author": "Brad Clark <bdashrad@gmail.com>",
