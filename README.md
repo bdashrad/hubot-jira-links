@@ -8,12 +8,12 @@ See [`src/jiralinks.coffee`](src/jiralinks.coffee) for full documentation.
 
 In hubot project repo, run:
 
-`npm install hubot-jiralinks --save`
+`npm install hubot-jira-links --save`
 
-Then add **hubot-jiralinks** to your `external-scripts.json`:
+Then add **hubot-jira-links** to your `external-scripts.json`:
 
 ```json
-["hubot-jiralinks"]
+["hubot-jira-links"]
 ```
 
 ## Configuration
@@ -29,7 +29,8 @@ If you don't set HUBOT_JIRA_PROJECTS, any pattern of [a-zA-Z]-#### will be linke
 ```
 user >> jira-1234
 hubot>> https://example.jira.com/browse/JIRA-1234
+```
 
 ## NPM Module
 
-https://www.npmjs.com/package/hubot-jiralinks
+https://www.npmjs.com/package/hubot-jira-links
