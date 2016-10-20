@@ -21,8 +21,7 @@ module.exports = (robot) ->
 
   if process.env.HUBOT_JIRA_PROJECTS
     regex = ///
-      (?:^|[^/])(?!https?://) # not http(s)
-      \b # word boundary
+      (?:^|\s) # start of line or space
       (#{process.env.HUBOT_JIRA_PROJECTS.split(',').join('|')}) # list of jira project prefixes
       - # a hyphen
       (\d+) # one or more digits
@@ -30,8 +29,7 @@ module.exports = (robot) ->
       ///i # case insensitive
   else
     regex = ///
-      (?:^|[^/])(?!https?://) # not http(s)
-      \b # word boundary
+      (?:^|\s) # start of line or space
       ([a-z]+) # one or more letters
       -
       (\d+) # one or more digits
