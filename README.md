@@ -1,5 +1,7 @@
 # hubot-jiralinks
 
+[![Build Status](https://travis-ci.org/bdashrad/hubot-jiralinks.svg)](https://travis-ci.org/bdashrad/hubot-jiralinks/)
+
 hubot scipt that recognized jira issue numbers and respond with their urls
 
 See [`src/jiralinks.coffee`](src/jiralinks.coffee) for full documentation.
