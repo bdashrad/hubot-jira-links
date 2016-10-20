@@ -1,7 +1,7 @@
 {
   "name": "hubot-jira-links",
   "description": "recognize jira issue numbers and respond with their urls",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Brad Clark <bdashrad@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/bdashrad/hubot-jiralinks#readme",
