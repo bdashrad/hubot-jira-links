@@ -23,6 +23,7 @@ Then add **hubot-jira-links** to your `external-scripts.json`:
 * `HUBOT_JIRA_DOMAIN` - domain when your jira instance lives (e.g. "example.atlassian.com")
 ### Optional:
 * `HUBOT_JIRA_PROJECTS` - comma separated list of project prefixes (e.g. "AB,CD,EF")
+* `HUBOT_JIRA_INSECURE` - if this is set, urls will be prefixed by 'http' instead  of 'https'.
 
 If you don't set `HUBOT_JIRA_PROJECTS`, any pattern of [a-zA-Z]-#### will be linked
 
