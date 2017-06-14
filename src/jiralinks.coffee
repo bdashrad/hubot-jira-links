@@ -7,6 +7,7 @@
 # Configuration:
 #   HUBOT_JIRA_DOMAIN - domain when your jira instance lives (e.g. "example.atlassian.com")
 #   HUBOT_JIRA_PROJECTS - comma separated list of project prefixes (e.g. "AB,CD,EF")
+#   HUBOT_JIRA_INSECURE - if this is set urls will be prefixed by "http" instead of "https"
 #
 # Commands:
 #   none
@@ -18,6 +19,11 @@
 #   Brad Clark <bdashrad@gmail.com>
 
 module.exports = (robot) ->
+
+  if process.env.HUBOT_JIRA_INSECURE?
+    http_proto = 'http://'
+  else
+    http_proto = 'https://'
 
   if process.env.HUBOT_JIRA_PROJECTS
     regex = ///
@@ -41,5 +47,5 @@ module.exports = (robot) ->
     project = res.match[1].toUpperCase()
     id = res.match[2]
     issue = project + '-' + id
-    url = 'https://' + process.env.HUBOT_JIRA_DOMAIN + '/browse/' + issue
+    url = http_proto + process.env.HUBOT_JIRA_DOMAIN + '/browse/' + issue
     res.send url
