@@ -13,4 +13,4 @@ describe 'jiralinks', ->
     require('../src/jiralinks')(@robot)
 
   it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/(?:^|\s)([a-z]+)-(\d+)\b/i)
+    expect(@robot.hear).to.have.been.calledWith(/(?:^|\s)([a-z]+)-(\d+)\b/ig)

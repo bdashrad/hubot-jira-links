@@ -32,7 +32,7 @@ module.exports = (robot) ->
       - # a hyphen
       (\d+) # one or more digits
       \b # word boundary
-      ///i # case insensitive
+      ///ig # case insensitive
   else
     regex = ///
       (?:^|\s) # start of line or space
@@ -40,12 +40,10 @@ module.exports = (robot) ->
       -
       (\d+) # one or more digits
       \b # word boundary
-      ///i
+      ///ig
 
   robot.hear regex, (res) ->
     # return if msg.subtype is 'bot_message'
-    project = res.match[1].toUpperCase()
-    id = res.match[2]
-    issue = project + '-' + id
-    url = http_proto + process.env.HUBOT_JIRA_DOMAIN + '/browse/' + issue
-    res.send url
+    urlify = (match) -> http_proto + process.env.HUBOT_JIRA_DOMAIN + '/browse/' + match.trim()
+    notify = (msg) -> res.send msg
+    notify urlify match for match in res.match
