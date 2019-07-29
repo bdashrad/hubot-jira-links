@@ -1,10 +1,10 @@
 {
-  "name": "hubot-jira-links",
-  "description": "recognize jira issue numbers and respond with their urls",
-  "version": "1.0.8",
-  "author": "Brad Clark <bdashrad@gmail.com>",
+  "name": "hubot-jira-links-multiple-tickets",
+  "description": "Recognize multiple jira issue numbers and respond with their urls",
+  "version": "1.0.0",
+  "author": "Chris W Jones <chris@christopherjones.us>",
   "license": "MIT",
-  "homepage": "https://github.com/bdashrad/hubot-jiralinks#readme",
+  "homepage": "https://github.com/magikid/hubot-jiralinks#readme",
   "keywords": [
     "hubot",
     "hubot-scripts",
@@ -12,25 +12,25 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/bdashrad/hubot-jiralinks.git"
+    "url": "git://github.com/magikid/hubot-jiralinks.git"
   },
   "bugs": {
-    "url": "https://github.com/bdashrad/hubot-jiralinks/issues"
+    "url": "https://github.com/magikid/hubot-jiralinks/issues"
   },
   "dependencies": {
     "coffee-script": "~1.6"
   },
   "peerDependencies": {
-    "hubot": "2.x"
+    "hubot": "~3.3"
   },
   "devDependencies": {
     "chai": "*",
     "grunt": "^1.0.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-mocha-test": "~0.7.0",
-    "grunt-release": "~0.6.1",
-    "hubot": "2.x",
-    "matchdep": "~0.1.2",
+    "grunt-contrib-watch": "~1.1",
+    "grunt-mocha-test": "^0.13.3",
+    "grunt-release": "^0.14.0",
+    "hubot": "~3.3",
+    "matchdep": "~2.0.0",
     "mocha": "*",
     "sinon": "*",
     "sinon-chai": "*"
