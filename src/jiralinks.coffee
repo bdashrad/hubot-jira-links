@@ -46,4 +46,13 @@ module.exports = (robot) ->
     # return if msg.subtype is 'bot_message'
     urlify = (match) -> http_proto + process.env.HUBOT_JIRA_DOMAIN + '/browse/' + match.trim()
     notify = (msg) -> res.send msg
-    notify urlify match for match in res.match
+
+    # Found unique here: https://maxrohde.com/2014/04/01/remove-duplicates-from-array-in-coffeescript/
+    unique = (tickets) ->
+      if tickets.length == 0
+        return []
+      res = {}
+      res[tickets[key]] = tickets[key] for key in [0..tickets.length-1]
+      value for key, value of res
+
+    notify urlify match for match in unique(res.match)
