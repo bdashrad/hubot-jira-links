@@ -51,8 +51,8 @@ module.exports = (robot) ->
     unique = (tickets) ->
       if tickets.length == 0
         return []
-      res = {}
-      res[tickets[key]] = tickets[key] for key in [0..tickets.length-1]
-      value for key, value of res
+      results = {}
+      results[tickets[key]] = tickets[key] for key in [0..tickets.length-1]
+      value for key, value of results
 
     notify urlify match for match in unique(res.match)
