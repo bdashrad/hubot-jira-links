@@ -1,7 +1,7 @@
 {
   "name": "hubot-jira-links-multiple-tickets",
   "description": "Recognize multiple jira issue numbers and respond with their urls",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Chris W Jones <chris@christopherjones.us>",
   "license": "MIT",
   "homepage": "https://github.com/magikid/hubot-jiralinks#readme",
