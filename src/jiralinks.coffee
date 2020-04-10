@@ -32,7 +32,7 @@ module.exports = (robot) ->
       - # a hyphen
       (\d+) # one or more digits
       \b # word boundary
-      ///i # case insensitive
+      ///ig # case insensitive, global match
   else
     regex = ///
       (?:^|\s) # start of line or space
@@ -40,12 +40,19 @@ module.exports = (robot) ->
       -
       (\d+) # one or more digits
       \b # word boundary
-      ///i
+      ///ig # case insensitive, global match
 
   robot.hear regex, (res) ->
     # return if msg.subtype is 'bot_message'
-    project = res.match[1].toUpperCase()
-    id = res.match[2]
-    issue = project + '-' + id
-    url = http_proto + process.env.HUBOT_JIRA_DOMAIN + '/browse/' + issue
-    res.send url
+    urlify = (match) -> http_proto + process.env.HUBOT_JIRA_DOMAIN + '/browse/' + match.trim()
+    notify = (msg) -> res.send msg
+
+    # Found unique here: https://maxrohde.com/2014/04/01/remove-duplicates-from-array-in-coffeescript/
+    res.send url      unique = (tickets) ->
+      if tickets.length == 0
+        return []
+      results = {}
+      results[tickets[key]] = tickets[key] for key in [0..tickets.length-1]
+      value for key, value of results
+
+    notify urlify match for match in unique(res.match)

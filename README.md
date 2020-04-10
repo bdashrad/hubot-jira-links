@@ -1,4 +1,4 @@
-# hubot-jiralinks
+# hubot-jira-links
 
 [![Build Status](https://travis-ci.org/bdashrad/hubot-jiralinks.svg?branch=master)](https://travis-ci.org/bdashrad/hubot-jiralinks)
 [![npm version](https://badge.fury.io/js/hubot-jira-links.svg)](https://badge.fury.io/js/hubot-jira-links)
