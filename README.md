@@ -5,7 +5,7 @@
 
 hubot scipt that recognized jira issue numbers and respond with their urls
 
-See [`src/jiralinks.coffee`](src/jiralinks.coffee) for full documentation.
+See [`src/jiralinks.js`](src/jiralinks.js) for full documentation.
 
 ## Installation
 

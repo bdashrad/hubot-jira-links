@@ -22,14 +22,17 @@
   },
   "devDependencies": {
     "chai": "*",
-    "coffeescript": "^1.6.3",
+    "grunt": "^1.4.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-mocha-test": "^0.13.3",
+    "grunt-release": "^0.5.1",
     "hubot": ">=2 <10 || 0.0.0-development",
     "matchdep": "^2.0.0",
     "mocha": "*",
     "sinon": "*",
     "sinon-chai": "*"
   },
-  "main": "index.coffee",
+  "main": "index.js",
   "scripts": {
     "test": "grunt test"
   }
