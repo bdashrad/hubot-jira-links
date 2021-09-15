@@ -1,7 +1,7 @@
 {
   "name": "hubot-jira-links",
   "description": "recognize jira issue numbers and respond with their urls",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "author": "Brad Clark <bdashrad@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/bdashrad/hubot-jiralinks#readme",
@@ -17,25 +17,22 @@
   "bugs": {
     "url": "https://github.com/bdashrad/hubot-jiralinks/issues"
   },
-  "dependencies": {
-    "coffee-script": "~1.6"
-  },
   "peerDependencies": {
-    "hubot": "2.x"
+    "hubot": ">=2 <10 || 0.0.0-development"
   },
   "devDependencies": {
     "chai": "*",
-    "grunt": "^1.0.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-mocha-test": "~0.7.0",
-    "grunt-release": "~0.6.1",
-    "hubot": "2.x",
-    "matchdep": "~0.1.2",
+    "grunt": "^1.4.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-mocha-test": "^0.13.3",
+    "grunt-release": "^0.5.1",
+    "hubot": ">=2 <10 || 0.0.0-development",
+    "matchdep": "^2.0.0",
     "mocha": "*",
     "sinon": "*",
     "sinon-chai": "*"
   },
-  "main": "index.coffee",
+  "main": "index.js",
   "scripts": {
     "test": "grunt test"
   }
